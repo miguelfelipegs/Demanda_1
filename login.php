@@ -38,32 +38,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="guest">
-
-    <div id="header">
-        <h1>Sistema de Acesso</h1>
-        <form method="POST">
-            <input type="text"     name="usuario" placeholder="Usuário" required>
-            <input type="password" name="senha"   placeholder="Senha"   required>
-            <button type="submit">Entrar</button>
-            <?php if (!empty($erro)): ?>
-                <span class="erro"><?php echo htmlspecialchars($erro); ?></span>
-            <?php endif; ?>
-        </form>
-    </div>
-
-    <div id="content">
-        <h2>Bem-vindo</h2>
-        <p>Utilize o menu superior para fazer login.</p>
-    </div>
-
-</body>
-</html>

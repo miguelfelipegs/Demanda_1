@@ -20,7 +20,7 @@ if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] !== true) {
     <div id="header">
         <h1>Olá, <?php echo ($_SESSION['usuario'] ?? ''); ?></h1>
         <nav>
-            <a href="index.php">Configurações</a>
+            <a href="#">Configurações</a>
             <a href="logout.php">Sair</a>
         </nav>
     </div>

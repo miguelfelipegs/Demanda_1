@@ -82,7 +82,6 @@ body {
 #main {
     flex: 1;
     padding: 24px;
-    position: relative; /* ADICIONADO: Base para centralizar o quadrado sem quebrar o layout */
 }
 
 #main h2 {
@@ -96,37 +95,22 @@ body {
     background: #f0f0f0;
 }
 
-/* ---- ESTRUTURA DO QUADRADO CENTRALIZADO ---- */
-.quadrado {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* ---- CORES POR TIPO DE USUÁRIO (HEADER, SIDEBAR, MAIN, QUADRADO) ---- */
-
-/* NÃO LOGADO */
+/* ---- COR: NÃO LOGADO ---- */
 body.guest #header {
     background: #444444;
 }
 
-/* ADMIN (azul) */
+/* ---- COR: ADMIN (azul) ---- */
 body.admin #header    { background: #2980b9; }
 body.admin #sidebar   { background: #d6eaf8; }
 body.admin #main      { background: #eaf4fb; }
-body.admin .quadrado  { background: #1f618d; } /* Tom de azul combinando */
 
-/* ROOT (vermelho) */
+/* ---- COR: ROOT (vermelho) ---- */
 body.root #header     { background: #c0392b; }
 body.root #sidebar    { background: #fadbd8; }
 body.root #main       { background: #fdf2f2; }
-body.root .quadrado   { background: #922b21; } /* Tom de vermelho combinando */
 
-/* MODERADOR (verde) */
+/* ---- COR: MODERADOR (verde) ---- */
 body.moderador #header  { background: #27ae60; }
 body.moderador #sidebar { background: #d5f5e3; }
 body.moderador #main    { background: #f0faf4; }
-body.moderador .quadrado { background: #1e8449; } /* Tom de verde combinando */

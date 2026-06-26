@@ -12,15 +12,15 @@ if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] !== true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel — <?php echo htmlspecialchars($_SESSION['tipo']); ?></title>
+    <title>Painel — <?php echo ($_SESSION['tipo']); ?></title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="<?php echo htmlspecialchars($_SESSION['tipo']); ?>">
+<body class="<?php echo ($_SESSION['tipo']); ?>">
 
     <div id="header">
         <h1>Olá, <?php echo ($_SESSION['usuario'] ?? ''); ?></h1>
         <nav>
-            <a href="#">Configurações</a>
+            <a href="config.php">Configurações</a>
             <a href="logout.php">Sair</a>
         </nav>
     </div>
